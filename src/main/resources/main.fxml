@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="347.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.alapierre.pki.gui.MainControler">
+    <children>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu text="Plik">
+                    <items>
+                        <MenuItem text="Zainstaluj certyfikat" onAction="#handleInstallMenuAction"/>
+                        <SeparatorMenuItem  />
+                        <MenuItem text="Wyjście"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ImageView fitHeight="325.0" fitWidth="512.0" layoutX="14.0" layoutY="14.0" opacity="0.09" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pki.gif" />
+            </image>
+        </ImageView>
+        <Label layoutX="22.0" layoutY="170.0" text="Imię i nazwisko:" />
+        <Label layoutX="22.0" layoutY="201.0" text="E-mail:" />
+        <Label layoutX="22.0" layoutY="229.0" text="Hasło do klucza:" />
+        <Label layoutX="22.0" layoutY="263.0" text="Potwierdź hasło:" />
+        <TextField promptText="Imię i nazwisko" fx:id="name" layoutX="130.0" layoutY="165.0" prefHeight="26.0" prefWidth="296.0" />
+        <TextField promptText="email" fx:id="email" layoutX="130.0" layoutY="196.0" prefHeight="26.0" prefWidth="296.0" />
+        <PasswordField onKeyReleased="#checkPassAction" promptText="Hasło do klucza" fx:id="pass" layoutX="130.0" layoutY="227.0" prefHeight="26.0" prefWidth="296.0" />
+        <PasswordField onKeyReleased="#checkPassAction" promptText="Potwierdź hasło" fx:id="passRep" layoutX="130.0" layoutY="260.0" prefHeight="26.0" prefWidth="296.0" />
+        <Button fx:id="generate" layoutX="356.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Generuj" />
+        <ProgressIndicator fx:id="progres" layoutX="356.0" layoutY="290.0"  visible="false" />
+    </children>
+</AnchorPane>

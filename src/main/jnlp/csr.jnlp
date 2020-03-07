@@ -1,0 +1,26 @@
+<jnlp spec="1.0+" codebase="http://jnlp.softproject.com.pl/csr" href="csr.jnlp">
+
+    <information>
+        <title>SoftProject CSR</title>
+        <vendor>SoftProject</vendor>
+        <shortcut online="true">
+            <desktop/>
+            <menu submenu="SoftProject"/>
+        </shortcut>
+        <homepage href="http://alapierre.io/" />
+    </information>
+
+    <security>
+        <all-permissions />
+    </security>
+
+    <resources>
+        <j2se version="1.8+" />
+        <!-- set -D system properties -->
+        <property name="jnlp.packEnabled" value="true"/>
+
+        <jar href="jpk-gui-1.0-SNAPSHOT-jar-with-dependencies.jar" main="true"/>
+
+    </resources>
+    <application-desc main-class="io.alapierre.pki.gui.PkiGui" />
+</jnlp>

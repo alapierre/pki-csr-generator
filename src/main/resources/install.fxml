@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="347.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.alapierre.pki.gui.InstallControler">
+    <children>
+        <ImageView fitHeight="325.0" fitWidth="512.0" layoutX="14.0" layoutY="14.0" opacity="0.09" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pki.gif" />
+            </image>
+        </ImageView>
+        <Label layoutX="22.0" layoutY="170.0" text="Certyfikat:" />
+        <Label layoutX="22.0" layoutY="201.0" text="Klucz prywatny:" />
+        <Label layoutX="22.0" layoutY="229.0" text="Hasło do klucza:" />
+
+        <TextField fx:id="ceret" promptText="Plik certyfikatu" layoutX="130.0" layoutY="165.0" prefHeight="26.0" prefWidth="296.0"/>
+        <Button text="..." onAction="#handleCertButtonAction" layoutX="430.0" layoutY="165.0" prefHeight="26.0" prefWidth="30.0" />
+
+        <TextField fx:id="key" promptText="Plik klucza" layoutX="130.0" layoutY="196.0" prefHeight="26.0" prefWidth="296.0"/>
+        <Button text="..." onAction="#handleKeyButtonAction" layoutX="430.0" layoutY="196.0" prefHeight="26.0" prefWidth="30.0" />
+        <PasswordField promptText="Hasło do klucza" fx:id="pass" layoutX="130.0" layoutY="227.0" prefHeight="26.0" prefWidth="296.0" />
+
+        <Button fx:id="installButton" layoutX="356.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleInstallButtonAction" text="Zainstaluj" />
+        <ProgressIndicator fx:id="progres" layoutX="356.0" layoutY="290.0"  visible="false" />
+    </children>
+</AnchorPane>
